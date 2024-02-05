@@ -208,6 +208,7 @@ mixin {
     add sourceSets.main, 'mixins.irisflw.refmap.json'
     config 'irisflw.mixins.flw.json'
     config 'irisflw.mixins.iris.json'
+    config 'irisflw.mixins.create.json'
 }
 
 tasks.withType(JavaCompile).configureEach {
