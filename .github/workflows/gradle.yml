@@ -39,11 +39,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Retrieve Archive Name
-      run: |
-        echo "ARCHIVE_NANE=$(${{github.workspace}}/gradlew -q printArchivesName)" >> $GITHUB_OUTPUT
-      id: archive_name
-      
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
@@ -52,5 +47,5 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
 #        name: iris-flw-compat-${{ steps.extract_branch.outputs.branch }}-${{ steps.getversion.outputs.version }}.jar
-        name: ${{ steps.archive_name.outputs.ARCHIVE_NANE }}.jar
+        name: iris-flw-compat.jar
         path: build/libs/*.jar
