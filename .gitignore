@@ -1,4 +1,5 @@
-/.gradle
-/build
-/.vscode
-/run
+/.gradle/
+/build/
+/.vscode/
+/run/
+/bin/
