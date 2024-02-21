@@ -67,7 +67,7 @@ public class MixinRenderTypes extends RenderStateShard {
                     .setCullState(NO_CULL)
                     // .setWriteMaskState(COLOR_DEPTH_WRITE)
                     // .setDepthTestState(LEQUAL_DEPTH_TEST)
-                    .setLightmapState(NO_LIGHTMAP) // its emissive so it should not be affected by light
+                    .setLightmapState(LIGHTMAP)
                     .setOverlayState(OVERLAY)
                     .setLayeringState(POLYGON_OFFSET_LAYERING) // apparently a technique used to fix z-fighting
                     // however, the back of the inner signal panel has z-fighting with the light
